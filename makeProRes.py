@@ -66,7 +66,8 @@ print(firstFilePath)
 # Output Filename
 outputFile = f.replace(str(fnl), "")
 outputFile = outputFile.replace("."+ext, "")
-outputFile = os.path.join(filePath, outputFile+".mov")
+topFilePath = os.path.split(filePath)[0]
+outputFile = os.path.join(topFilePath, outputFile+".mov")
 outputFile = outputFile.replace("..", ".")
 print("Output Filepath: "+outputFile)
 
